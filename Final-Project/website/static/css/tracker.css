@@ -1,0 +1,140 @@
+.tracker {
+  width: 100%;
+  height: 80%;
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #f9f5ff;
+}
+
+.circle-container {
+  width: 45%;
+  height: 80%;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.circle {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #998fc7;
+}
+
+.circle span {
+  font-size: 2.5rem;
+}
+
+.circle h1 {
+  font-size: 5rem;
+}
+
+.info {
+  width: 40%;
+  height: 80%;
+  margin: 3rem 0rem 3rem 0rem;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #998fc7;
+}
+
+.info h2 {
+  font-size: 6rem;
+}
+
+.info p {
+  padding: 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.forms {
+  width: 15%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tracker form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-input {
+  width: 100%;
+  margin: 0rem 0rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-input input {
+  width: 62%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  border: 2px solid #998fc7;
+  border-radius: 10px;
+  color: #998fc7;
+}
+
+.add-input input:focus {
+  outline: 2px solid #998fc7;
+}
+
+.button {
+  margin: 0rem 0rem 0rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button button {
+  width: 100%;
+  padding: 1rem 1.5rem 0.6rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  color: #998fc7;
+  cursor: pointer;
+}
+
+.reset-button {
+  margin: 0rem 0rem 0rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.reset-button button {
+  width: 100%;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  color: #998fc7;
+  cursor: pointer;
+}
+
+.reset {
+  font-size: 2.1rem;
+  color: #998fc7;
+}

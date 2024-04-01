@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="tracker">
+    <div class="circle-container">
+        <div class="circle">
+            {% for data in user.user_goal %}
+            <span>
+                {{ data.percent }}%
+            </span>
+            {% endfor %}
+
+            {% for data in user.user_input %}
+            <h1>
+                {{ data.daily_protein }}g
+            </h1>
+            {% endfor %}
+
+            {% for data in user.user_goal %}
+            <span>
+                out of {{ data.goal }}g
+            </span>
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="info">
+        {% for data in user.user_goal %}
+        <h2>
+            Goal: {{ data.goal }}g
+        </h2>
+        {% endfor %}
+
+        {% for data in user.user_goal %}
+        <p>You need {{ data.remaining_value }} more grams of protein.</p>
+        {% endfor %}
+
+    </div>
+    <div class="forms">
+        <form method="POST" action="{{ url_for('tracker.update_protein') }}">
+            <div class="add-input">
+                <input
+                        type="text"
+                        id="protein"
+                        name="protein"
+                        placeholder="Add Protein"
+                >
+            </div>
+            <div class="button">
+                <button type="submit">
+                    <span class="material-symbols-outlined">add</span>
+                </button>
+            </div>
+        </form>
+        <form method="POST" action="{{ url_for('tracker.update_goal') }}">
+            <div class="add-input">
+                <input
+                        type="text"
+                        id="goal"
+                        name="goal"
+                        placeholder="Change Goal"
+                >
+            </div>
+            <div class="button">
+                <button type="submit">
+                    <span class="material-symbols-outlined">add</span>
+                </button>
+            </div>
+        </form>
+        <form method="POST" action="{{ url_for('tracker.reset') }}">
+            <div class="reset-button">
+                <button type="submit">
+                    <span class="reset">Reset</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
